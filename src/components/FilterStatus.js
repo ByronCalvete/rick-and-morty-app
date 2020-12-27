@@ -24,7 +24,7 @@ export const FilterStatus = () => {
             <option value="">Filter by status</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
-            <option value="Unknown">Unknown</option>
+            <option value="unknown">Unknown</option>
         </select>
     )
 }

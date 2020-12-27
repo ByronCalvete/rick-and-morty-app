@@ -1,0 +1,24 @@
+.CharacterList-container {
+    display: grid;
+    grid-row-gap: 2rem;
+    justify-content: center;
+    background: var(--black);
+    padding: 4rem 2rem;
+}
+
+.CharacterList-container__button {
+    width: 250px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 auto;
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    background: var(--lightgreen);
+    cursor: pointer;
+}
+
+.CharacterList-container__button:hover {
+    background: #74c21c;
+}

@@ -1,0 +1,39 @@
+.Character-container {
+    box-sizing: border-box;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    border: 5px solid var(--lightgreen);
+    border-radius: 5px;
+    box-shadow: 0 0 7px 2px rgba(0,0,0, 0.1);
+}
+
+.Character-container__image {
+    max-width: 55%;
+}
+
+.Character-container__name {
+    margin: 5% auto;
+    font-size: 1rem;
+    color: var(--green);
+}
+
+.Character-container__info {
+    width: 80%;
+    font-size: 1rem;
+}
+
+.Character-container__info p strong {
+    color: var(--green);
+    align-self: flex-start;
+}
+
+.Character-container__info p {
+    color:var(--black);
+    font-weight: 300;
+    font-style: italic;
+}

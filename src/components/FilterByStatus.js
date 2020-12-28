@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import './styles/FilterByStatus.css';
+
 const filterByStatusAction = ( statusSelected ) => {
     console.log(statusSelected);
     return {
@@ -9,7 +11,7 @@ const filterByStatusAction = ( statusSelected ) => {
     }
 }
 
-export const FilterStatus = () => {
+export const FilterByStatus = () => {
     const dispatch = useDispatch();
     const filterByStatus = useSelector((state) => state.filterByStatus);
 
@@ -20,7 +22,7 @@ export const FilterStatus = () => {
     }
 
     return (
-        <select onChange={ onStatusChange } value={ filterByStatus } >
+        <select className="FilterByStatus-select" onChange={ onStatusChange } value={ filterByStatus } >
             <option value="">Filter by status</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>

@@ -1,0 +1,27 @@
+.Header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Header-container__image {
+    margin: 1rem 2rem;
+}
+
+.Header-container__image img {
+    width: 100%;
+}
+.Header-container__darkMode p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.Header-container__darkMode-moon {
+    display: inline-flex;
+    transform: rotate(-25deg);
+    margin-bottom: 0.5rem;
+}

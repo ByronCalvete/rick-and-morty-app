@@ -1,17 +1,18 @@
 import React from 'react';
-import { getItems } from '../services/api';
-import './styles/CharacterList.css';
-import Character from './Character';
 import { useSelector, useDispatch } from 'react-redux';
 
+import { getItems } from '../services/api';
+import './styles/CharacterList.css';
+
+import Character from './Character';
+
 const CharacterList = () => {
-    const [ inputValue, setInputValue ] = React.useState('');
     const dispatch = useDispatch();
 
     const characterListByName = useSelector((state) => state.characterListByName)
 
     const characterList = useSelector((state) => {
-        if ( '' !== state.filterByStatus ) {
+        if ( '' !== state.filterByStatus && characterListByName.length === 0 ) {
             return state.characterFilteredByStatus;
         }
 
@@ -37,32 +38,9 @@ const CharacterList = () => {
             })
     }, [page, dispatch])
 
-    const filterByName = ( e ) => {
-        setInputValue(e.target.value);
-        dispatch({
-            type: 'SET_CHARACTER_BY_NAME',
-            payload: e.target.value,
-        })
-    }
-
-    const clearInput = () => {
-        dispatch({
-            type: 'SET_CHARACTER_BY_NAME',
-            payload: '',
-        })
-        setInputValue('');
-    }
-
     return (
         <React.Fragment>
-            <input type="text" value={inputValue} onChange={filterByName}/>
-            {
-                inputValue && <button onClick={clearInput}>X</button>
-            }
-            {
-                characterListByName.length === 0 && inputValue && <p><strong>{inputValue}</strong>Not found in characters</p>
-            }   
-            <div className="CharacterList-container">
+            <div className="CharacterList-container">   
                 {
                     characterList.map( ({ id, name, status, gender, origin, image }) => {
                         return (

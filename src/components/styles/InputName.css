@@ -1,0 +1,30 @@
+.InputName-container {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 2px 9px 0 rgba(0,0,0,0.1);
+    font-size: 1rem;
+    border-radius: 5px;
+    align-items: center;
+    background: var(--white);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.InputName-container i {
+    margin-right: 1rem;
+    color: #ccc;
+}
+
+.InputName-container input {
+    width: 100%;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+}
+
+.InputName-container input::placeholder {
+    color: #ccc;
+    font-style: italic;
+    font-size: 0.9rem;
+}

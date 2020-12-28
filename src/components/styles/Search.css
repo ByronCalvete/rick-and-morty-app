@@ -1,0 +1,11 @@
+.Search-container {
+    display: flex;
+    position: relative;
+}
+
+.Search-container__close {
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: 0.8rem;
+}

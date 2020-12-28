@@ -1,5 +1,6 @@
 :root {
     --black: #383536;
+    --background: #e5e6e5;
     --white: #ffffff;
     --green: #0D383D;
     --lightgreen: #8AE91F;
@@ -7,4 +8,5 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background: var(--background)
 }

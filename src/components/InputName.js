@@ -5,7 +5,7 @@ const InputName = ({ ...props }) => {
     return (
         <React.Fragment>
             <label className="InputName-container">
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
                 <input 
                     type="text" 
                     placeholder="Favorite Character..."

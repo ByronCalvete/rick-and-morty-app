@@ -8,5 +8,5 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: var(--background)
+    background-image: url('./images/background.jpg');
 }

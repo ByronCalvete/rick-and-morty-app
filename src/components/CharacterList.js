@@ -5,6 +5,7 @@ import { getItems } from '../services/api';
 import './styles/CharacterList.css';
 
 import Character from './Character';
+import Wrapper from './Wrapper';
 
 const CharacterList = () => {
     const dispatch = useDispatch();
@@ -39,30 +40,33 @@ const CharacterList = () => {
     }, [page, dispatch])
 
     return (
-        <React.Fragment>
-            <div className="CharacterList-container">   
-                {
-                    characterList.map( ({ id, name, status, gender, origin, image }) => {
-                        return (
-                            <Character 
-                                key={id}
-                                name={name} 
-                                status={status} 
-                                gender={gender}
-                                origin={origin.name}
-                                image={image}
-                            />
-                        )
-                    })
-                }
+        <Wrapper>
+            <div className="CharacterList-container">
+                <div className="CharacterList-container__character">   
+                    {
+                        characterList.map( ({ id, name, status, gender, origin, image }) => {
+                            return (
+                                <Character 
+                                    key={id}
+                                    id={id}
+                                    name={name} 
+                                    status={status} 
+                                    gender={gender}
+                                    origin={origin.name}
+                                    image={image}
+                                />
+                            )
+                        })
+                    }
+                </div>
                 <button className="CharacterList-container__button" onClick={() => {
                     setPage(page + 1);
                     return getItems(`https://rickandmortyapi.com/api/character/?page=${page}`); 
                 }}>
                     Load more...
                 </button>
-            </div>
-        </React.Fragment>
+        </div>
+        </Wrapper>
     );
 }
 

@@ -28,7 +28,7 @@ const Search = () => {
     return (
         <div className="Search-container">
             {
-                inputValue && <i class="fas fa-times Search-container__close" onClick={clearInput}></i>
+                inputValue && <i className="fas fa-times Search-container__close" onClick={clearInput}></i>
             }
             <InputName value={inputValue} onChange={filterByName} />
         </div>

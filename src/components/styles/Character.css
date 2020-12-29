@@ -5,11 +5,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 250px;
-    height: 350px;
-    border: 5px solid var(--lightgreen);
+    height: 392px;
+    border: 5px solid var(--green);
     border-radius: 5px;
     box-shadow: 0 0 7px 2px rgba(0,0,0, 0.1);
+    cursor: pointer;
+}
+
+.Character-container:hover {
+    border: 5px solid var(--lightgreen);
+    transition: 0.25s;
+    transform: scale(1.02);
 }
 
 .Character-container__image {
@@ -24,6 +30,7 @@
 
 .Character-container__info {
     width: 80%;
+    padding-left: 2.5rem;
     font-size: 1rem;
 }
 

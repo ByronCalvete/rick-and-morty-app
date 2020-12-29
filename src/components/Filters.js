@@ -10,6 +10,7 @@ const Filters = () => {
         <Wrapper>
             <div className="Filters-container">
                 <Search />
+                <span></span>
                 <FilterByStatus />
             </div>
         </Wrapper>

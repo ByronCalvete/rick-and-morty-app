@@ -1,0 +1,50 @@
+.CharacterDetail-container {
+    background: var(--white);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    display: grid;
+}
+
+.CharacterDetail-container-image {
+    width: 90%;
+    margin: 1rem 0;
+    padding: 0 5%;
+}
+
+.CharacterDetail-container h2 {
+    font-size: 1.5rem;
+    color: var(--green);
+    padding: 0 5%;
+}
+
+.CharacterDetail-container__content {
+    display: grid;
+    padding: 0 5%;
+}
+
+.CharacterDetail-container__content p {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .CharacterDetail-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        align-items: center;
+    }
+
+    .CharacterDetail-container__content {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+    }
+
+    .CharacterDetail-container__content p {
+        font-size: 1.5rem;
+    }
+
+    .CharacterDetail-container h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}

@@ -1,5 +1,4 @@
 export default function reducer( state, action ) {
-    console.log(action);
     switch(action.type) {
         case 'SET_CHARACTER_LIST': {
             return {

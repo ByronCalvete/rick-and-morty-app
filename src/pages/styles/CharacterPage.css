@@ -1,0 +1,13 @@
+.CharacterPage-button {
+    background: var(--white);
+    border: none;
+    box-shadow: 0 0 5px var(--black);
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.CharacterPage-button i {
+    margin-right: 8px;
+}
